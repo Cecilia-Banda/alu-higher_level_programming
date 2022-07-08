@@ -7,5 +7,6 @@ def main():
     b = 2
     print("{} + {} = {}".format(a, b, add(a, b)))
 
-if _name_ == "_main_":
-    main
+
+if __name__ == "__main__":
+    main()
