@@ -2,7 +2,7 @@
 import sys
 
 
-def min():
+def main():
     args = sys.argv[1:]
     sum = 0
     for arg in args:
@@ -10,5 +10,5 @@ def min():
     print(sum)
 
 
-if _main_ == "_main_":
+if __name__ == "__main__":
     main()
