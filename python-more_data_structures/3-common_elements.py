@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
 
-def uniq_add(my_list=[]):
-    acum = sum(set(my_list))
-    return(acum)
+def common_elements(set_1, set_2):
+    common = set(set_1) & set(set_2)
+    return
