@@ -1,13 +1,15 @@
 #!/usr/bin/python3
+
+
 def roman_to_int(roman_string):
-    if roman_string is None or type(roman_string) is not str:
+    # check if the data type passed is not string
+    if not isinstance(roman_string, str):
         return 0
-    int_sum = 0
-    converter = dict(I=1, V=5, X=10, L=50, C=100, D=500, M=1000)
-    for current, next in zip(roman_string, roman_string[1:]):
-        if converter[current] >= converter[next]:
-            int_sum += converter[current]
-        else:
-            int_sum -= converter[current]
-    int_sum += converter[roman_string[-1]]
-    return int_sum
+    total = 0
+    num = 0
+    digits = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    # reveresetheromannumeralstostartwiththetensofunitsanduseeach unit
+    for r in reversed(roman_string):
+        num = digits[r]
+        total += num if total < num * 5 else -num
+    return total
