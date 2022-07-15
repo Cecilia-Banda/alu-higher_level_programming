@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-def element_at(my_list, idx):
+# 10-divisible_by_2.py
 
-    index = 0
-    if idx < 0:
-        return None
 
-    for element in my_list:
-        if index == idx:
-            return (element)
-        index += 1
-    if idx > index:
-        return None
+def divisible_by_2(my_list=[]):
+    """Find all multiples of 2 in a list."""
+    new_list = []
+    for i in range(len(my_list)):
+        if my_list[i] % 2 == 0:
+            new_list.append(True)
+        else:
+            new_list.append(False)
+
+    return (new_list)
