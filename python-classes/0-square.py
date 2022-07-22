@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-# Write an empty class
-
-"""Define a class square."""
+"""explains the Square class"""
 
 
-class square:
-    """Represent a sqaure."""
+class Square:
+    """It shows a square"""
     pass
