@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Make a class square."""
+"""Define a class square."""
 
 
 class square:
@@ -16,7 +16,7 @@ class square:
 
     @property
     def size(self):
-        """Set the current size of the square."""
+        """Prompt the current size of the square."""
         return (self.__size)
 
     @size.setter
