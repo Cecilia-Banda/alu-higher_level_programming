@@ -1,9 +1,20 @@
 #!/usr/bin/node
-'use strict';
-let nextMax = 0;
-let args = process.argv.slice(2);
-if (args.length > 1) {
-  args.sort();
-  nextMax = args[args.length - 2];
+const args = process.argv;
+const conA = Number(args[2]);
+const conB = Number(args[3]);
+let bigNow = conA;
+let secondlargest = conB;
+if (args.length <= 3) {
+  console.log(0);
+} else {
+  for (let i = 3; i < args.length; i++) {
+    if (Number(args[i]) > bigNow) {
+      secondlargest = bigNow;
+      bigNow = Number(args[i]);
+    }
+    if (Number(args[i]) > secondlargest && Number(args[i]) < bigNow) {
+      secondlargest = Number(args[i]);
+    }
+  }
+  console.log(secondlargest);
 }
-console.log(nextMax);
