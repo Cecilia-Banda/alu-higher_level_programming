@@ -1,12 +1,14 @@
 #!/usr/bin/node
-const request = require('request');
+
 const fs = require('fs');
-const url = process.argv[2];
-const filePath = process.argv[3];
-request(url, function (err, response, body) {
-  if (err) {
-    console.log(err);
-  } else {
-    fs.writeFile(filePath, body, 'utf-8');
+const request = require('request');
+request(process.argv[2], (error, res, body) => {
+  if (error) console.log(error);
+  try {
+    fs.writeFile(process.argv[3], body, 'utf-8', (err, result) => {
+      if (err) console.log(err);
+    });
+  } catch (error) {
+    console.log(error);
   }
 });
