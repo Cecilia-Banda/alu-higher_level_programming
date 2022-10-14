@@ -1,6 +1,0 @@
-#!/usr/bin/node
-<<<<<<< HEAD
-console.log(process.argv[2]+ ' is ' +process[3]);
-=======
-console.log(process.argv[2] + ' is ' + process.argv[3]);
->>>>>>> 7ce8d2315a26509e382b894a56adf14b782498b5
